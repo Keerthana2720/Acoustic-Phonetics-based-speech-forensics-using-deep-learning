@@ -28,37 +28,8 @@ Speaker Identification
 Tampered Speech Localization
 Report Generation
 Interactive Dashboard
-Project Structure
-MAJOR PROJECT
-│
-├── speech_forensics
-│   ├── checkpoints
-│   ├── data
-│   │   ├── raw
-│   │   ├── processed
-│   │   └── temp
-│   │
-│   ├── scripts
-│   │
-│   ├── src
-│   │   ├── app
-│   │   │   └── dashboard.py
-│   │   ├── model.py
-│   │   ├── features.py
-│   │   ├── train.py
-│   │   ├── report.py
-│   │   ├── evaluate.py
-│   │   └── localization.py
-│   │
-│   └── test_model.py
-│
-├── real
-├── fake
-├── checkpoints
-├── processed_data
-├── labels.csv
-└── README.md
-Technologies Used
+
+Technologies Used:
 Programming Languages
 Python 3.10+
 Deep Learning Frameworks
