@@ -1,0 +1,39 @@
+============================================================
+FINAL FORENSIC REPORT
+============================================================
+
+Input File: real_006522_seg000.wav
+Analysis Date: 2026-02-08 12:11:08
+
+------------------------------------------------------------
+PREDICTION RESULT
+------------------------------------------------------------
+Speech Status: ✅ REAL / GENUINE SPEECH
+
+Characteristics:
+  ✓ Authentic human voice
+  ✓ Natural phonetic transitions
+  ✓ Stable formant structure
+
+------------------------------------------------------------
+CONFIDENCE SCORES
+------------------------------------------------------------
+Overall Confidence: 89.49%
+Real Speech Probability: 89.49%
+Fake Speech Probability: 10.51%
+
+------------------------------------------------------------
+TAMPERING SUMMARY
+------------------------------------------------------------
+Tampered Portion: 0.00% (0.00s)
+Genuine Portion: 100.00% (3.00s)
+Duplicate / Tamper Type: Human / genuine speech
+
+------------------------------------------------------------
+KEY EVIDENCE
+------------------------------------------------------------
+  1. Natural pitch and formant patterns observed
+
+============================================================
+END OF REPORT
+============================================================

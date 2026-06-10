@@ -1,0 +1,54 @@
+============================================================
+FINAL FORENSIC REPORT
+============================================================
+
+Input File: fake_000047_seg000.wav
+Analysis Date: 2026-02-08 13:05:09
+
+------------------------------------------------------------
+PREDICTION RESULT
+------------------------------------------------------------
+Speech Status: ⚠️  FAKE / SPOOFED SPEECH
+
+Characteristics:
+  ✗ Synthesized (TTS/VC)
+  ✗ Deepfake detected
+  ✗ Possible replay attack or editing
+
+------------------------------------------------------------
+CONFIDENCE SCORES
+------------------------------------------------------------
+Overall Confidence: 100.00%
+Real Speech Probability: 0.00%
+Fake Speech Probability: 100.00%
+
+------------------------------------------------------------
+TAMPERING SUMMARY
+------------------------------------------------------------
+Tampered Portion: 33.33% (1.00s)
+Genuine Portion: 66.67% (2.00s)
+Duplicate / Tamper Type: AI / synthetic manipulation
+
+------------------------------------------------------------
+ATTACK TYPE IDENTIFICATION
+------------------------------------------------------------
+Attack Type: GAN-based Deepfake
+Attack Type Confidence: 21.90%
+
+------------------------------------------------------------
+TAMPERED REGION LOCALIZATION
+------------------------------------------------------------
+Audio Timeline:
+
+  [0.00s – 1.00s] → Tampered (Confidence: 87.2%)
+
+------------------------------------------------------------
+KEY EVIDENCE
+------------------------------------------------------------
+  1. Pitch contour inconsistent - high variation detected
+  2. CQCC artifacts detected - spectral anomalies present
+  3. High confidence fake detection - strong evidence of manipulation
+
+============================================================
+END OF REPORT
+============================================================

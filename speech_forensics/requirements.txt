@@ -1,0 +1,16 @@
+python>=3.9
+torch>=2.1
+torchaudio>=2.1
+librosa>=0.10
+soundfile>=0.12
+pydub>=0.25
+numpy>=1.24
+scikit-learn>=1.3
+scipy>=1.11
+matplotlib>=3.8
+pyyaml>=6.0
+streamlit>=1.35
+transformers>=4.40
+noisereduce>=3.0
+praat-parselmouth>=0.4
+gammatone>=1.0

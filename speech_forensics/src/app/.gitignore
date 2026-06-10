@@ -1,0 +1,14 @@
+.venv/
+Indian_Languages_Audio_Dataset/
+real/
+fake/
+processed_data/
+checkpoints/
+speech_forensics/checkpoints/
+
+*.wav
+*.mp3
+*.pth
+*.pt
+*.h5
+*.log

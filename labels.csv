@@ -1,0 +1,11 @@
+filename,label
+real_1.wav,real
+real_2.wav,real
+real_3.wav,real
+real_4.wav,real
+real_5.wav,real
+fake_1.wav,fake
+fake_2.wav,fake
+fake_3.wav,fake
+fake_4.wav,fake
+fake_5.wav,fake

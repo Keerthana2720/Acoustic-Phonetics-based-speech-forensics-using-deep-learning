@@ -1,0 +1,77 @@
+# ============================================================================
+# AUDIO FORENSICS MODEL TRAINING CONFIGURATION
+# ============================================================================
+# 
+# This configuration file controls all aspects of model training and inference
+# Key settings to monitor: epochs, batch_size, and learning rate below
+#
+
+# ============================================================================
+# TRAINING HYPERPARAMETERS - MAIN SETTINGS (ADJUST THESE MOST FREQUENTLY)
+# ============================================================================
+training:
+  epochs: 3                  # [MAIN] Number of training epochs (increase for better accuracy)
+  batch_size: 32             # [MAIN] Batch size per training step (higher = more memory, faster training)
+  num_workers: 4             # Number of DataLoader workers (increase for faster I/O)
+  use_torch_compile: true    # Use torch.compile() when available (may improve speed)
+  lr: 0.0003                 # Learning rate for optimizer
+  weight_auth: 1.0           # Weight for authenticity loss
+  weight_attack: 0.7         # Weight for attack detection loss
+  weight_local: 0.6          # Weight for localization loss
+  use_weight_sampler: true   # Use weighted sampling for class imbalance
+  augment: true              # Enable data augmentation during training
+
+# ============================================================================
+# AUDIO PROCESSING PARAMETERS
+# ============================================================================
+seed: 42                     # Random seed for reproducibility
+sample_rate: 16000           # Audio sample rate (Hz)
+segment_seconds: 3           # Segment duration in seconds (MUST be int)
+hop_seconds: 3               # Hop duration in seconds (MUST be int)
+
+# ============================================================================
+# FILE PATHS
+# ============================================================================
+paths:
+  raw: "data/raw"
+  processed: "data/processed"
+  checkpoints: "outputs/checkpoints"
+  logs: "outputs/logs"
+  reports: "outputs/reports"
+
+# ============================================================================
+# DATA ORGANIZATION
+# ============================================================================
+data:
+  real_subdir: "real"        # Directory name for real audio samples
+  fake_subdir: "fake"        # Directory name for fake/synthetic audio samples
+
+# ============================================================================
+# FEATURE EXTRACTION CONFIGURATION
+# ============================================================================
+features:
+  spectral: "lfcc"           # Spectral feature type (Linear Frequency Cepstral Coefficients)
+  use_gammatone: false       # Use Gammatone filterbank features
+  use_ppg: false             # Use PPG (Pitch Periodicity) features
+  use_acoustic_phonetic: true # Use acoustic-phonetic features
+
+# ============================================================================
+# MODEL ARCHITECTURE
+# ============================================================================
+model:
+  hidden_size: 128           # Hidden layer dimension in LSTM
+  lstm_layers: 1             # Number of LSTM layers
+  dropout: 0.0               # Dropout rate (0.0 = no dropout, 0.5 = 50%)
+  fusion: "concat"           # Feature fusion method (concat/add/multiply)
+  num_attack_types: 5        # Number of attack types to detect
+  decision_threshold: 0.5    # Threshold for binary classification
+  uncertainty_margin: 0.05   # Margin around threshold for uncertain predictions
+
+# ============================================================================
+# FEATURE DIMENSIONS
+# ============================================================================
+lfcc_dim: 20                 # LFCC feature dimension
+pfe_dim: 5                   # PFE (Power Feature) dimension
+ppg_dim: 32                  # PPG (Pitch Periodicity) dimension
+num_classes: 2               # Number of output classes (0=real, 1=fake)
+device: cpu                  # Device for training (cpu/cuda)
